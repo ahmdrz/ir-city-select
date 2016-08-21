@@ -7,6 +7,7 @@ $(document).ready(function () {
     var citySelector = $('.ir-province').closest('div.ir-select').find('.ir-city');
     citySelector.empty();
     citySelector.append($('<option>نام شهر</option>').attr('value', '-1'));
+    citySelector.attr('disabled', 'disabled');
 });
 
 var loadProvinces = function () {
@@ -20,14 +21,19 @@ var loadProvinces = function () {
 };
 
 var loadCities = function () {
+    var selectedProvince = $(this).val();    
     var citySelector = $(this).closest('div.ir-select').find('.ir-city');
-    var selectedProvince = $(this).val();
-    var cityList = data[selectedProvince];
+    if (selectedProvince == '-1') {
+        citySelector.attr('disabled', 'disabled');
+    } else {
+        citySelector.removeAttr('disabled');
+        var cityList = data[selectedProvince];
 
-    citySelector.empty();
-    citySelector.append($('<option>نام شهر</option>').attr('value', '-1'));
-    $.each(cityList, function (index, city) {
-        var option = $('<option></option>').attr('value', city).text(city);
-        citySelector.append(option);
-    });
+        citySelector.empty();
+        citySelector.append($('<option>نام شهر</option>').attr('value', '-1'));
+        $.each(cityList, function (index, city) {
+            var option = $('<option></option>').attr('value', city).text(city);
+            citySelector.append(option);
+        });
+    }
 };
