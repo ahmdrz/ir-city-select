@@ -1,12 +1,7 @@
 # ir-city-select
-
-This repository forked from @kayvanmazaheri [here](https://kayvanmazaheri.github.io/ir-city-select/)
-
 Easily place a list of provinces and cities of Iran on your HTML `<form>` using simple `<select>` elements.
 
 Demo and Persian documentation is available [here](https://kayvanmazaheri.github.io/ir-city-select/)
-
-New version after forked [here](https://ahmdrz.github.io/ir-city-select/)
 
 ## Usage
 ```html
@@ -17,13 +12,4 @@ New version after forked [here](https://ahmdrz.github.io/ir-city-select/)
 </div>
 ```
 
-## Changes after forked
-
-1. Disable city `<select>` elements before province elements not changes. 
-2. First `<option>` of `<select>` fill as default.
-
-## Todo list
-
-1. Add new cities to JSON data.
-2. Use without `<div class="ir-select">`.
-3. Make optional using javascript file.
+_to be completed ..._
